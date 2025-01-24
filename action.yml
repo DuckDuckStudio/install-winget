@@ -24,10 +24,11 @@ runs:
   using: composite
   steps:
     - name: Check runner os
-      if: ${{ runner.os != 'Windows' }}
+      if: ${{ (runner.name != 'windows-latest') && (runner.name != 'windows-2022') }}
       shell: powershell
       run: |
-        Write-Error "This action only runs on Windows runner."
+        Write-Error "This action only runs on Windows runner with 'windows-latest' or 'windows-2022'."
+        Write-Error "Current: ${{ runner.name }}"
 
     - name: Download Microsoft.UI.Xaml v2.8.6
       shell: powershell
