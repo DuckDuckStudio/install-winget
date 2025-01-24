@@ -1,4 +1,4 @@
-name: Install winget
+name: Install winget Test
 description: Installs a version of winget
 author: Dominion/Cyberboss
 branding:
