@@ -23,6 +23,12 @@ runs:
 # https://github.com/microsoft/winget-cli/issues/700#issuecomment-874084714
   using: composite
   steps:
+    - name: Check runner os
+      if: ${{ runner.os != 'Windows' }}
+      shell: powershell
+      run: |
+        Write-Error "This action only runs on Windows runner."
+
     - name: Download Microsoft.UI.Xaml v2.8.6
       shell: powershell
       run: |
