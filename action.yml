@@ -27,7 +27,7 @@ runs:
       if: ${{ runner.os != 'Windows' }}
       shell: powershell
       run: |
-        throw "[ERROR] This action only runs on Windows runner, Current runner: ${{ runner.os }}"
+        throw "This action only runs on Windows runner, Current runner: ${{ runner.os }}"
 
     - name: Download Microsoft.UI.Xaml v2.8.6
       shell: powershell
