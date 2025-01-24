@@ -25,9 +25,9 @@ runs:
   steps:
     - name: Check runner os
       if: ${{ runner.os != 'Windows' }}
-      shell: powershell
+      shell: bash
       run: |
-        Write-Host "[ERROR] This action only runs on Windows runner, Current runner: ${{ runner.os }}"
+        echo "[ERROR] This action only runs on Windows runner, Current runner: ${{ runner.os }}"
         exit 1
 
     - name: Download Microsoft.UI.Xaml v2.8.6
