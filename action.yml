@@ -130,4 +130,3 @@ runs:
         $version=winget --version
         Write-Host "$version"
         Write-Output "winget-version=$version" >> $Env:GITHUB_OUTPUT
-
